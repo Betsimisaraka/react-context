@@ -3,9 +3,9 @@ import { ThemeContextConsumer } from './ThemeContext';
 
 function Button() {
 	return (
-		<ThemeContextConsumer>
-			{theme => (
-				<button className={`${theme}-theme`}>Switch Theme</button>
+		<ThemeContextConsumer> 
+			{context => (
+				<button onClick={context.toggleTheme} className={`${context.theme}-theme`}>Switch Theme</button>
 			)}
 		</ThemeContextConsumer>
 	)
